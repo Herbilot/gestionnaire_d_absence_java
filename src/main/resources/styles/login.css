@@ -1,0 +1,68 @@
+.login_container{
+    -fx-background-color: #EEEEEE;
+}
+
+/*Logo et nom de l'application*/
+.login_logo_container{
+    -fx-background-color: #4D455D;
+    -fx-alignment: center;
+}
+.login_logo_container Text{
+    -fx-font-size: 18px;
+    -fx-fill: #FFF;
+}
+
+.login_logo_container FontAwesomeIconView{
+    -fx-fill:#FFF;
+}
+
+/* se connecter en tant choiceboxe style*/
+.type_compte{
+    -fx-background-color: #F8F5F1;
+}
+.type_compte .label{
+    -fx-text-fill: #000000;
+    -fx-font-size: 9px;
+}
+.type_compte .fleche{
+    -fx-background-color: #000000;
+}
+#choiceboxe-popup-menu{
+    -fx-background-color: #EEEEEE;
+}
+
+/*Login form*/
+.login_form_container{
+    -fx-spacing: 15;
+    -fx-alignment: top-left;
+}
+
+.login_form_container Label{
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+}
+
+.input_field{
+    -fx-background-color: #FFF;
+    -fx-pref-height: 35;
+    -fx-font-size: 1.2em;
+}
+
+#button_connect{
+    -fx-alignment: center;
+}
+
+.login_form_container Button{
+    -fx-background-color: #4D455D;
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-width: 250;
+    -fx-pref-height: 25;
+    -fx-font-size: 1.1em;
+}
+.login_form_container Button:hover{
+    -fx-cursor: hand;
+}
+
+.error_label{
+    -fx-text-fill: #FF0000;
+}

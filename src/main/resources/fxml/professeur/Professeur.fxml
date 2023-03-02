@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" styleClass="enregistrement_container" stylesheets="@../../styles/professeur.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.herbidev.gestionsabsence.controllers.UtilisateurControlleur">
+    <TableView fx:id="etudiantTableView" layoutX="30.0" layoutY="49.0" onMouseClicked="#selectionner" prefHeight="216.0" prefWidth="940.0">
+      <columns>
+          <TableColumn fx:id="matriculeColumn" maxWidth="245.0" prefWidth="245.0" text="Matricule" />
+          <TableColumn fx:id="nomColumn" maxWidth="245.0" prefWidth="245.0" text="Nom" />
+          <TableColumn fx:id="prenomColumn" maxWidth="245.0" prefWidth="245.0" text="Prénom" />
+          <TableColumn fx:id="nbrAbsenceColumn" maxWidth="245.0" prefWidth="245.0" text="Nombre d'absence" />
+      </columns>
+    </TableView>
+   <Label layoutX="30.0" layoutY="272.0" text="Enregistrments" />
+   <Pane layoutX="30.0" layoutY="290.0" prefHeight="117.0" prefWidth="940.0" styleClass="enregistrement_container">
+      <children>
+         <TextField fx:id="txtMatricule" layoutX="78.0" layoutY="16.0" />
+         <TextField fx:id="txtNom" layoutX="78.0" layoutY="78.0" />
+         <TextField fx:id="txtPrenom" layoutX="319.0" layoutY="78.0" />
+         <TextField fx:id="txtRole" layoutX="316.0" layoutY="16.0" />
+         <TextField fx:id="txtMdp" layoutX="583.0" layoutY="78.0" />
+         <Label fx:id="lblMatricule" layoutX="7.0" layoutY="20.0" text="Matricule">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblNom" layoutX="11.0" layoutY="86.0" text="Nom">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblPrenom" layoutX="258.0" layoutY="88.0" text="Prénom" />
+         <Label fx:id="lblRole" layoutX="258.0" layoutY="22.0" text="Role" />
+         <Label fx:id="lblMdp" layoutX="494.0" layoutY="88.0" text="Mot de passe" />
+      </children>
+   </Pane>
+   <Pane layoutX="30.0" layoutY="429.0" prefHeight="57.0" prefWidth="940.0" styleClass="enregistrement_container">
+      <children>
+         <Button fx:id="btnAjouter" layoutX="45.0" layoutY="16.0" mnemonicParsing="false" onAction="#ajouterEvent" prefHeight="25.0" prefWidth="100.0" text="Ajouter" />
+         <Button fx:id="btnModifier" layoutX="162.0" layoutY="16.0" mnemonicParsing="false" onAction="#modifierEvent" prefWidth="100.0" text="Modifier" />
+         <Button fx:id="btnSupprimer" layoutX="278.0" layoutY="16.0" mnemonicParsing="false" onAction="#supprimerEvent" prefWidth="100.0" text="Supprimer" />
+         <Button fx:id="btnEffacer" layoutX="520.0" layoutY="16.0" mnemonicParsing="false" onAction="#effacerEvent" prefWidth="100.0" text="Effacer" />
+         <Button fx:id="btnHistorique" layoutX="393.0" layoutY="16.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Voir l'hostorique" />
+      </children>
+   </Pane>
+   <Label layoutX="30.0" layoutY="413.0" text="Actions" />
+</Pane>

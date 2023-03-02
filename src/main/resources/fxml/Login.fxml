@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="login_container" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.herbidev.gestionsabsence.controllers.LoginControlleur">
+   <VBox prefHeight="400.0" prefWidth="250.0" styleClass="login_logo_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <FontAwesomeIconView glyphName="GRADUATION_CAP" size="70" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GESTIONNAIRE" />
+      <Text layoutX="74.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D'ABSENCES" />
+   </VBox>
+   <VBox layoutX="252.0" prefHeight="400.0" prefWidth="350.0" styleClass="login_form_container" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label fx:id="type_compte_label" text="Se connecter en tant que:" />
+      <ChoiceBox fx:id="type_compte" prefWidth="150.0" styleClass="type_compte" />
+      <Label fx:id="matricule_label" text="Matricule:" />
+      <TextField fx:id="matricule_entry" styleClass="input_field" />
+      <Label fx:id="mdp_label" text="Mot de passe:" />
+      <PasswordField fx:id="mdp_entry" styleClass="input_field" />
+      <Button id="button_connect" fx:id="login_btn" mnemonicParsing="false" onAction="#validateLogin" text="Se connecter">
+         <VBox.margin>
+            <Insets left="50.0" top="15.0" />
+         </VBox.margin></Button>
+      <Label fx:id="error_label" styleClass="error_label" />
+   </VBox>
+</AnchorPane>
